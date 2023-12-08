@@ -16,10 +16,12 @@ import "@fontsource/roboto/700.css";
 import React, { useEffect, useState } from "react";
 
 import bg from "../Assets/bg3.jpg";
+
 import { Link } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import { Alert } from "../Common";
 import { RiLoginCircleFill } from "react-icons/ri";
+
+import { Alert } from "../Common";
 
 export default function Login() {
   const [email, setEmail] = useState("");
