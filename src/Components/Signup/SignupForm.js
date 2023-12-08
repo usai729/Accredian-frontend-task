@@ -57,17 +57,20 @@ export default function SignupForm() {
     if (password !== "" && email !== "" && username !== "" && !loading) {
       setLoading(true);
 
-      const response_raw = await fetch("http://localhost:3001/api/register", {
-        method: "post",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email: email,
-          username: username,
-          password: password,
-        }),
-      });
+      const response_raw = await fetch(
+        "https://accredian-backend-task-ecru.vercel.app/api/register",
+        {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email: email,
+            username: username,
+            password: password,
+          }),
+        }
+      );
 
       const response = await response_raw.json();
 

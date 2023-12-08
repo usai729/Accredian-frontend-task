@@ -40,16 +40,19 @@ export default function Login() {
           setAlert("No email/username");
         }
       } else {
-        const responseRaw = await fetch("http://localhost:3001/api/login", {
-          method: "post",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            email: email,
-            password: password,
-          }),
-        });
+        const responseRaw = await fetch(
+          "https://accredian-backend-task-ecru.vercel.app/api/login",
+          {
+            method: "post",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              email: email,
+              password: password,
+            }),
+          }
+        );
 
         const response = await responseRaw.json();
 
