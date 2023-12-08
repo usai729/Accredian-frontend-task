@@ -73,6 +73,10 @@ export default function Login() {
     }, 2000);
   };
 
+  useEffect(() => {
+    document.title("Accredian - Login")
+  })
+
   return (
     <div
       className="flex justify-center items-center w-screen h-screen"
