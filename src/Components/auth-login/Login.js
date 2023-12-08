@@ -74,7 +74,7 @@ export default function Login() {
   };
 
   useEffect(() => {
-    document.title("Accredian - Login")
+    document.title="Accredian - Login";
   })
 
   return (
