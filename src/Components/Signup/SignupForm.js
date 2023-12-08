@@ -91,6 +91,10 @@ export default function SignupForm() {
     }, 2000);
   };
 
+  useEffect(() => {
+    document.title = "Accredian - Signup"
+  })
+
   return (
     <>
       <Box
